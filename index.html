@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1769e0">
+<meta name="description" content="GyanPath — school learning and competitive exam practice in one place.">
+<link rel="manifest" href="manifest.json">
+<title>GyanPath — One App. Endless Learning.</title>
+<style>
+:root{--blue:#1769e0;--blue2:#0e4fb5;--pale:#edf5ff;--ink:#17243b;--muted:#62718a;--line:#e5ebf4;--bg:#f5f8fc;--white:#fff;--green:#138a55;--red:#c43e45}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}button,input{font:inherit}button{cursor:pointer}.app{max-width:1100px;margin:auto;min-height:100vh;padding-bottom:86px}.topbar{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}.brand{display:flex;align-items:center;gap:10px}.logo{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--blue),#55a1ff);display:grid;place-items:center;color:white;font-weight:900;font-size:22px;box-shadow:0 6px 15px #1769e033}.brand h1{font-size:20px;margin:0;letter-spacing:-.5px}.brand small{display:block;color:var(--muted);font-size:11px;margin-top:1px}.pill{border:0;background:var(--pale);color:var(--blue2);padding:9px 12px;border-radius:12px;font-weight:700}.content{padding:20px}.hero{background:linear-gradient(120deg,#155bd0,#398bf0);color:white;border-radius:23px;padding:25px 23px;position:relative;overflow:hidden;box-shadow:0 12px 28px #1769e02b}.hero:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;border:25px solid #ffffff17;right:-50px;top:-55px}.eyebrow{text-transform:uppercase;letter-spacing:1.4px;font-size:11px;font-weight:800;opacity:.8}.hero h2{font-size:29px;line-height:1.15;margin:10px 0}.hero p{margin:0 0 18px;max-width:480px;color:#e8f2ff;line-height:1.5}.primary{border:0;border-radius:12px;background:white;color:var(--blue2);padding:12px 16px;font-weight:800}.section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:26px 0 13px}.section-head h2{font-size:19px;margin:0}.section-head button{border:0;background:transparent;color:var(--blue);font-weight:750}.search{width:100%;border:1px solid var(--line);border-radius:14px;padding:14px 15px;background:white;outline:none;margin:18px 0 0}.search:focus{border-color:var(--blue);box-shadow:0 0 0 3px #1769e015}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.card{background:white;border:1px solid var(--line);border-radius:17px;padding:16px 12px;min-height:115px;text-align:left;box-shadow:0 3px 10px #1d355708;transition:transform .15s,border .15s}.card:hover{transform:translateY(-2px);border-color:#b7d3ff}.icon{width:43px;height:43px;border-radius:13px;display:grid;place-items:center;font-size:23px;background:var(--pale);margin-bottom:12px}.card strong{display:block;font-size:14px}.card small{display:block;color:var(--muted);margin-top:5px;font-size:12px}.feature-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.feature{border:1px solid var(--line);background:white;border-radius:16px;padding:16px}.feature .icon{margin-bottom:10px}.feature h3{font-size:14px;margin:0 0 5px}.feature p{font-size:12px;color:var(--muted);line-height:1.45;margin:0}.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:#ffffffed;backdrop-filter:blur(12px);border-top:1px solid var(--line);display:flex;justify-content:center;z-index:10}.nav-inner{width:min(1100px,100%);display:grid;grid-template-columns:repeat(4,1fr);padding:8px 10px max(8px,env(safe-area-inset-bottom))}.nav-btn{border:0;background:transparent;color:#7b879b;display:flex;align-items:center;flex-direction:column;gap:3px;padding:5px;font-size:11px;font-weight:700}.nav-btn span{font-size:21px}.nav-btn.active{color:var(--blue)}.page-title{margin:4px 0 8px;font-size:26px}.subtext{color:var(--muted);line-height:1.5;margin:0 0 18px}.list{display:grid;gap:10px}.list-item{display:flex;align-items:center;gap:13px;padding:15px;background:white;border:1px solid var(--line);border-radius:15px;text-align:left;width:100%}.list-item .icon{margin:0;flex-shrink:0}.list-item .grow{flex:1}.list-item strong{display:block}.list-item small{color:var(--muted);display:block;margin-top:4px}.arrow{font-size:22px;color:#91a0b5}.quizbox,.panel{background:white;border:1px solid var(--line);border-radius:19px;padding:20px}.quiz-meta{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;font-weight:700;margin-bottom:14px}.quizbox h3{font-size:20px;line-height:1.4;margin:0 0 18px}.answers{display:grid;gap:10px}.answer{border:1px solid var(--line);background:#fff;border-radius:13px;padding:13px;text-align:left;color:var(--ink)}.answer.correct{border-color:#68c79c;background:#edfff5}.answer.wrong{border-color:#e99da1;background:#fff2f2}.explanation{display:none;margin-top:15px;padding:13px;border-radius:12px;background:var(--pale);line-height:1.5;font-size:14px}.explanation.show{display:block}.quiz-actions{display:flex;justify-content:space-between;align-items:center;margin-top:16px;gap:10px}.blue-btn{border:0;border-radius:12px;background:var(--blue);color:white;padding:12px 16px;font-weight:800}.blue-btn:disabled{opacity:.4;cursor:not-allowed}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}.stat{background:white;border:1px solid var(--line);border-radius:15px;padding:16px 12px}.stat strong{font-size:23px;display:block;color:var(--blue)}.stat small{color:var(--muted)}.empty{padding:25px;text-align:center;color:var(--muted);background:white;border:1px dashed #cbd5e1;border-radius:15px}.tag{display:inline-block;border-radius:100px;background:#edf5ff;color:#1769e0;font-size:11px;font-weight:800;padding:5px 9px}.notice{font-size:12px;color:var(--muted);line-height:1.5;margin-top:18px}.hidden{display:none!important}.footer{text-align:center;font-size:11px;color:#8793a5;margin:28px 0 5px}
+@media(max-width:700px){.content{padding:16px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding:23px 20px}.hero h2{font-size:26px}.feature-row{grid-template-columns:1fr}.topbar{padding:13px 16px}.brand h1{font-size:18px}.stats{gap:7px}.stat{padding:13px 9px}.stat strong{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="topbar">
+  <div class="brand"><div class="logo">G</div><div><h1>GyanPath</h1><small>One App. Endless Learning.</small></div></div>
+  <button class="pill" id="dailyBtn">☀ Daily quiz</button>
+</header>
+<main class="content">
+<section id="homePage">
+  <div class="hero"><div class="eyebrow">Your learning journey starts here</div><h2>Learn something<br>great today.</h2><p>School subjects, competitive exams and practice quizzes — all in one place.</p><button class="primary" onclick="showPage('study')">Explore subjects&nbsp; →</button></div>
+  <input class="search" id="homeSearch" placeholder="🔎  Search subjects, exams or topics..." aria-label="Search subjects and exams">
+  <div class="section-head"><h2>Explore subjects</h2><button onclick="showPage('study')">See all →</button></div>
+  <div class="grid" id="homeSubjects"></div>
+  <div class="section-head"><h2>Prepare for exams</h2><button onclick="showPage('exams')">View all →</button></div>
+  <div class="list" id="homeExams"></div>
+  <div class="section-head"><h2>Make learning a habit</h2></div>
+  <div class="feature-row">
+    <div class="feature"><div class="icon">🧠</div><h3>Quick quizzes</h3><p>Test what you know and learn from every answer.</p></div>
+    <div class="feature"><div class="icon">📈</div><h3>Track progress</h3><p>Your completed questions and scores stay on this device.</p></div>
+    <div class="feature"><div class="icon">📖</div><h3>Learn by topic</h3><p>Start with a subject, then practise step by step.</p></div>
+  </div>
+  <p class="footer">GyanPath • A learning companion for curious minds</p>
+</section>
+<section id="studyPage" class="hidden">
+  <h2 class="page-title">Study subjects</h2><p class="subtext">Choose a subject to begin learning and practise with a short quiz.</p>
+  <input class="search" id="studySearch" placeholder="🔎  Find a subject..." aria-label="Find a subject">
+  <div class="grid" id="allSubjects" style="margin-top:16px"></div>
+</section>
+<section id="examsPage" class="hidden">
+  <h2 class="page-title">Competitive exams</h2><p class="subtext">Build your foundation with topic-wise practice for popular exams.</p>
+  <div class="list" id="allExams"></div>
+  <p class="notice">Exam syllabuses and patterns can change. Always check the latest official notification for your target exam.</p>
+</section>
+<section id="quizPage" class="hidden">
+  <h2 class="page-title" id="quizTitle">Daily quiz</h2><p class="subtext" id="quizIntro">Try a question and read the explanation.</p>
+  <div id="quizArea"></div>
+</section>
+<section id="profilePage" class="hidden">
+  <h2 class="page-title">Your progress</h2><p class="subtext">Your practice history is saved locally in this browser on this device.</p>
+  <div class="stats"><div class="stat"><strong id="statAnswered">0</strong><small>Answered</small></div><div class="stat"><strong id="statCorrect">0</strong><small>Correct</small></div><div class="stat"><strong id="statAccuracy">0%</strong><small>Accuracy</small></div></div>
+  <div class="panel"><h3 style="margin-top:0">Keep going!</h3><p id="profileMessage" class="subtext" style="margin-bottom:0">Complete a quiz to see your learning progress here.</p></div>
+  <button class="blue-btn" style="margin-top:14px" onclick="resetProgress()">Reset progress</button>
+  <p class="notice">This prototype does not have online accounts or cloud backup. Clearing browser data may erase your progress.</p>
+</section>
+</main>
+</div>
+<nav class="bottom-nav"><div class="nav-inner">
+<button class="nav-btn active" data-page="home"><span>⌂</span>Home</button>
+<button class="nav-btn" data-page="study"><span>📚</span>Study</button>
+<button class="nav-btn" data-page="exams"><span>🎯</span>Exams</button>
+<button class="nav-btn" data-page="profile"><span>👤</span>Progress</button>
+</div></nav>
+<script>
+const subjects=[
+{name:"Physics",icon:"⚛️",detail:"Motion, energy, electricity",color:"blue"},
+{name:"Chemistry",icon:"🧪",detail:"Atoms, reactions, matter"},
+{name:"Biology",icon:"🧬",detail:"Cells, life and ecosystems"},
+{name:"Mathematics",icon:"📐",detail:"Numbers, algebra, geometry"},
+{name:"History",icon:"🏛️",detail:"People, events and timelines"},
+{name:"Geography",icon:"🌍",detail:"Earth, maps and climate"},
+{name:"Civics",icon:"⚖️",detail:"Constitution and government"},
+{name:"English",icon:"🔤",detail:"Grammar and vocabulary"}
+];
+const exams=[
+{name:"SSC",icon:"🎯",detail:"General Awareness, Maths, Reasoning and English"},
+{name:"Railway",icon:"🚆",detail:"General Science, Maths, Reasoning and GK"},
+{name:"General Knowledge",icon:"🌏",detail:"India, world, history and current affairs"},
+{name:"General Science",icon:"🔬",detail:"Physics, Chemistry and Biology fundamentals"}
+];
+const questions=[
+{topic:"General Knowledge",q:"Which is the largest state of India by area?",options:["Uttar Pradesh","Rajasthan","Madhya Pradesh","Maharashtra"],answer:1,explanation:"Rajasthan is India's largest state by area."},
+{topic:"Science",q:"What is the chemical formula of water?",options:["CO₂","O₂","H₂O","NaCl"],answer:2,explanation:"A water molecule contains two hydrogen atoms and one oxygen atom, so its formula is H₂O."},
+{topic:"Civics",q:"The Constitution of India came into effect on which date?",options:["15 August 1947","26 January 1950","26 November 1949","2 October 1950"],answer:1,explanation:"The Constitution was adopted on 26 November 1949 and came into effect on 26 January 1950."},
+{topic:"Mathematics",q:"What is 15% of 200?",options:["15","20","30","45"],answer:2,explanation:"15% of 200 = (15 ÷ 100) × 200 = 30."},
+{topic:"Biology",q:"Which part of a plant cell contains chlorophyll?",options:["Nucleus","Chloroplast","Cell wall","Vacuole"],answer:1,explanation:"Chlorophyll, the green pigment used in photosynthesis, is found in chloroplasts."},
+{topic:"Geography",q:"Which imaginary line divides Earth into the Northern and Southern Hemispheres?",options:["Tropic of Cancer","Prime Meridian","Equator","Arctic Circle"],answer:2,explanation:"The Equator is at 0° latitude and divides Earth into the Northern and Southern Hemispheres."},
+{topic:"Physics",q:"What is the SI unit of force?",options:["Joule","Watt","Pascal","Newton"],answer:3,explanation:"Force is measured in newtons (N), named after scientist Isaac Newton."},
+{topic:"History",q:"Who is widely known as the chief architect of the Indian Constitution?",options:["Sardar Patel","Dr. B. R. Ambedkar","Jawaharlal Nehru","Rajendra Prasad"],answer:1,explanation:"Dr. B. R. Ambedkar chaired the Drafting Committee of the Constituent Assembly."}
+];
+let currentQuestions=questions, qIndex=0, selected=false, quizCorrect=0;
+let progress=JSON.parse(localStorage.getItem("gyanpathProgress")||'{"answered":0,"correct":0}');
+function saveProgress(){localStorage.setItem("gyanpathProgress",JSON.stringify(progress))}
+function subjectCard(s){return `<button class="card" onclick="startSubject('${s.name}')"><div class="icon">${s.icon}</div><strong>${s.name}</strong><small>${s.detail}</small></button>`}
+function examCard(e){return `<button class="list-item" onclick="startExam('${e.name}')"><div class="icon">${e.icon}</div><div class="grow"><strong>${e.name}</strong><small>${e.detail}</small></div><span class="arrow">›</span></button>`}
+function renderSubjects(filter=""){let f=filter.toLowerCase();document.getElementById("allSubjects").innerHTML=subjects.filter(s=>(s.name+" "+s.detail).toLowerCase().includes(f)).map(subjectCard).join("")||'<div class="empty">No subjects found. Try another search.</div>';document.getElementById("homeSubjects").innerHTML=subjects.slice(0,4).map(subjectCard).join("")}
+function renderExams(){document.getElementById("allExams").innerHTML=exams.map(examCard).join("");document.getElementById("homeExams").innerHTML=exams.slice(0,2).map(examCard).join("")}
+function showPage(page){document.querySelectorAll("main section").forEach(s=>s.classList.add("hidden"));document.getElementById(page+"Page").classList.remove("hidden");document.querySelectorAll(".nav-btn").forEach(b=>b.classList.toggle("active",b.dataset.page===page));if(page==="profile")renderProgress();window.scrollTo({top:0,behavior:"smooth"})}
+document.querySelectorAll(".nav-btn").forEach(b=>b.addEventListener("click",()=>showPage(b.dataset.page)));
+function startSubject(name){let qs=questions.filter(q=>q.topic.toLowerCase()===name.toLowerCase());if(!qs.length)qs=questions.filter(q=>["General Knowledge","Science","Mathematics"].includes(q.topic));startQuiz(name+" practice",qs,"Practice questions related to "+name+". This starter version includes sample questions; more topic-wise content can be added.");}
+function startExam(name){startQuiz(name+" practice",questions,"Starter practice set for "+name+". These are sample questions, not an official mock test.");}
+function startDaily(){startQuiz("Daily quiz",questions,"Answer each question and read the explanation to learn as you go.");}
+function startQuiz(title,qs,intro){currentQuestions=qs;qIndex=0;selected=false;quizCorrect=0;document.getElementById("quizTitle").textContent=title;document.getElementById("quizIntro").textContent=intro;showPage("quiz");renderQuestion()}
+function renderQuestion(){let q=currentQuestions[qIndex];if(!q){document.getElementById("quizArea").innerHTML=`<div class="panel"><div class="icon">🎉</div><h3>Quiz complete!</h3><p>You answered ${currentQuestions.length} questions and got ${quizCorrect} correct.</p><button class="blue-btn" onclick="showPage('profile')">View progress</button> <button class="pill" onclick="startDaily()">Try again</button></div>`;return}
+document.getElementById("quizArea").innerHTML=`<div class="quizbox"><div class="quiz-meta"><span>QUESTION ${qIndex+1} OF ${currentQuestions.length}</span><span class="tag">${q.topic}</span></div><h3>${q.q}</h3><div class="answers">${q.options.map((o,i)=>`<button class="answer" data-index="${i}">${String.fromCharCode(65+i)}. ${o}</button>`).join("")}</div><div class="explanation" id="explanation"></div><div class="quiz-actions"><span style="color:var(--muted);font-size:12px">Choose one answer</span><button class="blue-btn" id="nextBtn" disabled>${qIndex===currentQuestions.length-1?"Finish quiz":"Next question →"}</button></div></div>`;
+document.querySelectorAll(".answer").forEach(b=>b.addEventListener("click",()=>chooseAnswer(Number(b.dataset.index))));document.getElementById("nextBtn").addEventListener("click",()=>{qIndex++;selected=false;renderQuestion()})}
+function chooseAnswer(i){if(selected)return;selected=true;let q=currentQuestions[qIndex];progress.answered++;let correct=i===q.answer;if(correct){progress.correct++;quizCorrect++}saveProgress();document.querySelectorAll(".answer").forEach((b,j)=>{b.disabled=true;if(j===q.answer)b.classList.add("correct");else if(j===i)b.classList.add("wrong")});let ex=document.getElementById("explanation");ex.innerHTML=`<strong>${correct?"Correct!":"Not quite."}</strong> ${q.explanation}`;ex.classList.add("show");document.getElementById("nextBtn").disabled=false}
+function renderProgress(){document.getElementById("statAnswered").textContent=progress.answered;document.getElementById("statCorrect").textContent=progress.correct;document.getElementById("statAccuracy").textContent=(progress.answered?Math.round(progress.correct/progress.answered*100):0)+"%";document.getElementById("profileMessage").textContent=progress.answered?`You've answered ${progress.answered} questions and got ${progress.correct} correct. Keep practising to build your knowledge.`:"Complete a quiz to see your learning progress here."}
+function resetProgress(){if(confirm("Reset all saved quiz progress on this device?")){progress={answered:0,correct:0};saveProgress();renderProgress()}}
+document.getElementById("dailyBtn").addEventListener("click",startDaily);
+document.getElementById("homeSearch").addEventListener("input",e=>{showPage("study");document.getElementById("studySearch").value=e.target.value;renderSubjects(e.target.value)});
+document.getElementById("studySearch").addEventListener("input",e=>renderSubjects(e.target.value));
+renderSubjects();renderExams();
+if("serviceWorker" in navigator && location.protocol.startsWith("http"))navigator.serviceWorker.register("sw.js").catch(()=>{});
+</script>
+</body>
+</html>
